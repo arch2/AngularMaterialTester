@@ -16,8 +16,8 @@ import {
     MatOptionModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
-import { ObserversModule } from '../../node_modules/@angular/cdk/observers';
-import { PlatformModule } from '../../node_modules/@angular/cdk/platform';
+import { ObserversModule } from '@angular/cdk/observers';
+import { PlatformModule } from '@angular/cdk/platform';
 
 @NgModule({
     imports: [

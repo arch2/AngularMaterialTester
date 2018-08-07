@@ -1,0 +1,13 @@
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <mat-tab-group dynamicHeight>
+        <mat-tab [label]="section.sectionTitle" *ngFor="let section of Sections; let i = index">
+            <card-form [card]="section.cards" [form]="formGroup"></card-form>
+        </mat-tab>
+    </mat-tab-group>
+    <mat-card class="card-buffer">
+        <mat-card-title>Save/Submit</mat-card-title>
+        <mat-card-content>
+            <button type="submit" mat-raised-button>Submit</button>
+        </mat-card-content>
+    </mat-card>
+</form>

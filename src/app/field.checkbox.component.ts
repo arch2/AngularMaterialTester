@@ -1,15 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormGroup } from '../../node_modules/@angular/forms';
 
 @Component({
-    selector: 'f-checkbox-group',
-    template: `
-    <div fxLayout="row wrap" fxLayoutAlign="space-between center">
-      <div *ngFor="let checkbox of checkboxes; let i = index">
-        <mat-checkbox [id]="checkbox.key">{{checkbox.label}} </mat-checkbox>
-      </div>  
-    </div>
-  `
+  selector: 'f-checkbox',
+  template: `<mat-checkbox [id]="checkbox.key">{{checkbox.label}} </mat-checkbox>`
 })
-export class FieldCheckboxGroup {
-    @Input('dataProvider') checkboxes: Array<any>;
+export class FieldCheckbox {
+  @Input('dataProvider') checkbox: any;
+  @Input('form') formGroup: FormGroup;
 }

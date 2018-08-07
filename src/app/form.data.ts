@@ -1,33 +1,127 @@
-export const FORM_DATA =
-  [
-    {
-      "controlType": "checkboxGroup",
-      "visible": true,
-      "list": [
-        { "key": "stuWheelchair", "label": "Wheelchair", "required": false, "order": 1, "controlType": "checkbox", "visible": true, "disabled": true, "type": "" },
-        { "key": "stuWheelchair2", "label": "Wheelchair", "required": false, "order": 1, "controlType": "checkbox", "visible": true, "disabled": true, "type": "" },
-        { "key": "stuCurbToCurb", "label": "Curb-to-curb", "required": false, "order": 1, "controlType": "checkbox", "visible": true, "disabled": true, "type": "" },
-        { "key": "stuAide", "label": "Aide", "required": false, "order": 1, "controlType": "checkbox", "visible": true, "disabled": true, "type": "" },
-      ]
-    },
-    {
-      "controlType": "timeRange", "visible": true, "label": "Start",
-      "start": { "key": "stuStartTimeBegin", "value": "" },
-      "end": { "key": "stuStartTimeEnd", "value": "" }
-    },
-    {
-      "controlType": "timeRange", "visible": true, "label": "End",
-      "start": { "key": "stuEndTimeBegin", "value": "" },
-      "end": { "key": "stuEndTimeEnd", "value": "" }
-    },
-    {
-      "key": "stuStatus", "label": "Reg. Status", "required": false, "order": 1, "controlType": "dropdown", "visible": true, "disabled": false,
-      "options": [
-        { "key": "A", "value": "A" },
-        { "key": "C", "value": "C" },
-        { "key": "I", "value": "I" },
-        { "key": "+", "value": "+" }
-      ]
-    },
-    { "key": "stuGradeLevel", "label": "Grade Level", "required": false, "order": 1, "controlType": "textbox", "visible": true, "disabled": false, "type": "" }
-  ];
+export const FORM_DATA = [
+  {
+    "sectionTitle": "Section Test",
+    "formId": "test",
+    "cards": [
+      {
+        "cardTitle": "Card Title",
+        "fields": [
+          {
+            "controlType": "checkbox",
+            "key": "IsWheelchair",
+            "label": "Wheelchair",
+            "value": "0",
+            "order": 1,
+            "visible": true,
+            "disabled": false,
+            "validation": [
+              { "required": false }
+            ]
+          },
+          {
+            "controlType": "datetimepicker",
+            "key": "StartDate",
+            "label": "Start",
+            "value": "05/26/1980",
+            "order": 3,
+            "visible": true,
+            "disabled": false,
+            "validation": [
+              { "required": false }
+            ]
+          },
+          {
+            "controlType": "dropdown",
+            "key": "stuStatus",
+            "label": "Reg. Status",
+            "value": "A",
+            "order": 2,
+            "visible": true,
+            "disabled": false,
+            "options": [
+              { "key": "A", "value": "A" },
+              { "key": "C", "value": "C" },
+              { "key": "I", "value": "I" },
+              { "key": "+", "value": "+" }
+            ],
+            "validation": [
+              { "required": false }
+            ]
+          },
+          {
+            "controlType": "textbox",
+            "key": "stuGradeLevel",
+            "label": "Grade Level",
+            "value": "Test",
+            "order": 4,
+            "visible": true,
+            "disabled": false,
+            "validation": [
+              { "required": false }
+            ]
+          }
+        ]
+      },
+      {
+        "cardTitle": "Card 2",
+        "fields": [
+          {
+            "controlType": "checkbox",
+            "key": "IsChair",
+            "label": "Chair",
+            "value": "0",
+            "order": 1,
+            "disabled": false,
+            "validation": [
+              { "required": false }
+            ]
+          },
+          {
+            "controlType": "datetimepicker",
+            "key": "EndDate",
+            "label": "End",
+            "value": "05/26/1980",
+            "order": 3,
+            "disabled": false,
+            "validation": [
+              { "required": false }
+            ]
+          },
+          {
+            "controlType": "textbox",
+            "key": "stuGradeLevel",
+            "label": "Grade Level",
+            "value": "Test2",
+            "order": 4,
+            "disabled": false,
+            "validation": [
+              { "required": false }
+            ]
+          }
+        ]
+      }
+    ],
+  },
+  {
+    "sectionTitle": "Section 2 Test",
+    "formId": "test",
+    "cards": [
+      {
+        "cardTitle": "Second Tab Card",
+        "fields": [
+          {
+            "controlType": "datetimepicker",
+            "key": "StartDate",
+            "label": "Start",
+            "value": "05/26/1980",
+            "order": 3,
+            "disabled": false,
+            "validation": [
+              { "required": false }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];

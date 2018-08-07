@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormGroup } from '../../node_modules/@angular/forms';
 
 @Component({
     selector: 'f-textbox',
@@ -13,4 +14,5 @@ import { Component, Input } from '@angular/core';
 export class TextboxComponent {
     @Input('dataProvider') value: Array<any>;
     @Input('label') label: string;
+    @Input('form') formGroup: FormGroup;
 }

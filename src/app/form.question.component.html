@@ -1,0 +1,6 @@
+<div *ngFor="let question of questions; let i = index" [ngSwitch]="question.controlType" class="switch" fxLayout="row wrap" fxLayoutAlign="space-between center">
+    <f-checkbox *ngSwitchCase="'checkbox'" [dataProvider]="question" [form]="formGroup"></f-checkbox>
+    <f-date-time-picker *ngSwitchCase="'datetimepicker'" [dataProvider]="question" [form]="formGroup"></f-date-time-picker>
+    <f-dropdown *ngSwitchCase="'dropdown'" [dataProvider]="question.options" [label]="question.label" [form]="formGroup"></f-dropdown>
+    <f-textbox *ngSwitchCase="'textbox'" [dataProvider]="question.key" [label]="question.label" [form]="formGroup"></f-textbox>
+</div>

@@ -9,3 +9,7 @@ body {
        Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
 }
+
+.card-buffer {
+    margin-top: 5px;
+}
