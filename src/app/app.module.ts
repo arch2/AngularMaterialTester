@@ -5,7 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialTesterComponent } from './material.tester.component';
 import { FieldCheckbox } from './field.checkbox.component';
 import { FieldDateTimeRange } from './field.date.time.range.component';
@@ -37,6 +37,7 @@ import { CardFormComponent } from './form.card.component';
     BrowserAnimationsModule,
     FormsModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
     MaterialModule
   ],
   providers: [],

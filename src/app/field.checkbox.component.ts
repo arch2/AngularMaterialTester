@@ -3,7 +3,11 @@ import { FormGroup } from '../../node_modules/@angular/forms';
 
 @Component({
   selector: 'f-checkbox',
-  template: `<mat-checkbox [id]="checkbox.key">{{checkbox.label}} </mat-checkbox>`
+  template: `
+    <div [formGroup]="formGroup">
+      <mat-checkbox  [id]="checkbox.key" [formControlName]="checkbox.key">{{checkbox.label}} </mat-checkbox>
+    </div>
+  `
 })
 export class FieldCheckbox {
   @Input('dataProvider') checkbox: any;

@@ -4,9 +4,9 @@ import { FormGroup } from '../../node_modules/@angular/forms';
 @Component({
     selector: 'f-dropdown',
     template: `
-    <mat-form-field>
-        <mat-select [placeholder]="label">
-        <mat-option *ngFor="let item of options" [value]="item.key">
+    <mat-form-field [formGroup]="formGroup">
+        <mat-select [placeholder]="data.label" [formControlName]="data.key">
+        <mat-option *ngFor="let item of data.options" [value]="data.key">
             {{item.value}}
         </mat-option>
         </mat-select>
@@ -14,7 +14,6 @@ import { FormGroup } from '../../node_modules/@angular/forms';
   `
 })
 export class FieldDropdownComponent {
-    @Input('dataProvider') options: Array<any>;
-    @Input('label') label: string;
+    @Input('dataProvider') data: any;
     @Input('form') formGroup: FormGroup;
 }

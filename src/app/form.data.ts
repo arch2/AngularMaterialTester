@@ -1,4 +1,4 @@
-export const FORM_DATA = [
+export const FORM_DATA: Array<any> = [
   {
     "sectionTitle": "Section Test",
     "formId": "test",
@@ -69,9 +69,10 @@ export const FORM_DATA = [
             "controlType": "checkbox",
             "key": "IsChair",
             "label": "Chair",
-            "value": "0",
+            "value": 0,
             "order": 1,
             "disabled": false,
+            "formId": "test",
             "validation": [
               { "required": false }
             ]
@@ -83,6 +84,7 @@ export const FORM_DATA = [
             "value": "05/26/1980",
             "order": 3,
             "disabled": false,
+            "formId": "test",
             "validation": [
               { "required": false }
             ]
@@ -94,6 +96,7 @@ export const FORM_DATA = [
             "value": "Test2",
             "order": 4,
             "disabled": false,
+            "formId": "test",
             "validation": [
               { "required": false }
             ]
@@ -111,11 +114,12 @@ export const FORM_DATA = [
         "fields": [
           {
             "controlType": "datetimepicker",
-            "key": "StartDate",
-            "label": "Start",
-            "value": "05/26/1980",
+            "key": "TestDate",
+            "label": "Test",
+            "value": "8/8/2018",
             "order": 3,
             "disabled": false,
+            "formId": "test",
             "validation": [
               { "required": false }
             ]
